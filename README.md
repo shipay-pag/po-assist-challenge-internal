@@ -21,6 +21,13 @@
 
 Uma documentação de uma API, geralmente conta com uma descrição geral que contemple as principais características do serviço, além do detalhamento técnico de cada componente do contrato da API. Dê uma olhada na forma como escrevemos a descrição do serviço de Cobranças Para Pagamento Instantâneo:
 
+> ### Pedidos para Pagamentos Instantâneos
+> Esse serviço cria um pedido no PSP (Pix) ou Carteira Digital informado. Tem como principais características: aprovação instantânea e expiração em 60 minutos.
+> Após a expiração, não será possível pagar os pedidos.
+> Recomendamos a utilização desse serviço para sistemas de PDV e e-commerce que exijam aprovação instantânea do pagamento quando ele é realizado pelo pagador e confirmado pela Carteira Digital ou PSP (Pix).
+> Não recomendamos a utilização desse serviço para cobranças em que o pagamento pode ser feito em momentos maiores do que 60 minutos.
+
+
 - Com essas informações em mãos, como você documentaria somente a descrição do serviço Pix Cobrança com Vencimento (Padrão Bacen)?
 
 
