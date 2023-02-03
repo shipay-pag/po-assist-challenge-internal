@@ -170,7 +170,7 @@ Vi seu report no grupo, vc consegue mandar o curl da requisição para eu conseg
 
 ---
 
-**v. O DEV do Sistema de PDV RetailSystem reportou indisponibilidade no ambiente de staging (ambiente de homologação/integração)
+**v. O DEV do Sistema de PDV RetailSystem reportou indisponibilidade no ambiente de staging (ambiente de homologação/integração)**
 ```
 pessoal, deste ontem a noite estamos recebendo erro 503 para criar pedidos com expiração variável (POST /orderv)
 
