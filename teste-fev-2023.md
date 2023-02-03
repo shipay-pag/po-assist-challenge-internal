@@ -17,7 +17,11 @@ Ou seja, a compra inicial foi de R$ 450, mas a substituição no momento da sepa
 **Como você responderia?**
 
 
+
 ----
+----
+
+
 
 **2) As seguintes descrições das APIs da Shipay constam na nossa documentação oficial. Leia-as atentamente:**
 
@@ -26,11 +30,11 @@ Ou seja, a compra inicial foi de R$ 450, mas a substituição no momento da sepa
 
 *Autenticação de PDVs ('Pontos de Venda' ou 'Caixas')*
 
-Serviço de autenticação JWT (JSON Web Token) gerado através das três chaves de autenticação de PDVs (access key, secret key e client id) criadas com o cadastro do cliente (lojista) e suas respectivas lojas e caixas na Shipay.
+Serviço de autenticação JWT gerado através das três chaves de autenticação de PDVs (access key, secret key e client id) criadas com o cadastro do cliente (lojista) e suas respectivas lojas e caixas na Shipay.
 
 O access_token retornado por este serviço tem validade de 3 dias e deve ser utilizado para que o PDV autenticado possa realizar as demais chamadas nas APIs da Shipay.
 
-Este serviço de autenticação deve ser chamado em toda abertura do caixa no estabelecimento comercial. Importante notar que, caso um caixa fique mais de 3 dias consecutivos aberto, o access_token irá expirar e deverá ser renovado com o refresh_token.
+Este serviço de autenticação deve ser chamado em toda abertura do caixa no estabelecimento comercial.
 
 
 
@@ -44,8 +48,6 @@ Tem como principais características: aprovação instantânea após o pagamento
 
 Recomendamos a utilização desse serviço para sistemas de PDV e e-commerce que exijam aprovação instantânea do pagamento quando ele é realizado pelo pagador e confirmado pela Carteira Digital ou PSP (Pix).
 
-Não recomendamos a utilização desse serviço para cobranças em que o pagamento possa ser feito em momentos maiores do que 60 minutos.
-
 
 
 **iii. Serviço GET /order/<order_id>**
@@ -57,14 +59,16 @@ Este serviço retorna informações de um pedido específico. Deve ser utilizado
 IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segundos entre uma e outra.
 
 
+----
+
 
 
 
 ```
 [03/Feb/2023:00:15:04 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
-[03/Feb/2023:00:15:05 +0000] "GET /v1/wallets                                 HTTP/1.0" 200 2589 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:04 +0000] "GET /v1/wallets                                 HTTP/1.0" 200 2589 "-" "python-requests/2.24.0" "107.178.207.1
 [03/Feb/2023:00:15:05 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
-[03/Feb/2023:00:15:04 +0000] "POST /order                                     HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:05 +0000] "POST /order                                     HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
 [03/Feb/2023:00:15:06 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
 [03/Feb/2023:00:15:06 +0000] "GET /order/f04e1945-3088-4dd3-8818-817ab98a8357 HTTP/1.0" 200 579 "-" "python-requests/2.24.0" "107.178.207.1
 [03/Feb/2023:00:15:07 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
