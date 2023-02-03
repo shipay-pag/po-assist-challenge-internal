@@ -176,3 +176,7 @@ pessoal, deste ontem a noite estamos recebendo erro 503 para criar pedidos com e
 
 isso está atrasando nossa integração, podem verificar, por favor?
 ```
+
+---
+
+### Considerando a situação, qual a ordem de prioridade? 
