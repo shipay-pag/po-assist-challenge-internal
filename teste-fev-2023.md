@@ -97,6 +97,9 @@ IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segun
 [03/Feb/2023:00:15:11 +0000] "GET /order/f04e1945-3088-4dd3-8818-817ab98a8357 HTTP/1.0" 200 579 "-" "python-requests/2.24.0" "107.178.207.1
 ```
 **Dicas:**
-- Cada linha de log representa uma chamada que o parceiro fez na nossa API
-- A ordem cronológica dos eventos é de baixo para cima
-- 
+- Cada linha de log registra uma chamada que o parceiro fez em alguma API
+- A ordem cronológica dos eventos é de cima para baixo
+
+----
+
+### Considerando o exposto, quais recomendações você daria para o sistema de PDV que desenvolveu esta integração? 
