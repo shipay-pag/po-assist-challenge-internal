@@ -103,3 +103,64 @@ IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segun
 ----
 
 ### Considerando o exposto, você sugeriria alguma melhoria para o sistema de PDV que desenvolveu esta integração? Explique.
+
+
+
+----
+----
+
+
+
+
+## 3) Durante um dia normal de trabalho, você se depara com as seguintes demandas no mesmo instante:
+
+**i. Dúvida no grupo de Suporte à integração do PDV MaxSystem**
+```
+pessoal, tentei gerar um pedido no POST /order e recebi a seguinte mensagem de erro:
+
+"message":"The total of the purchase does not match with the sum of the items price"
+
+podem me ajudar?
+```
+
+---
+
+**ii. Dúvida no grupo de Suporte à integração do PDV SmartPDV**
+```
+bom dia, estou com algumas dúvidas
+
+organizei as dúvidas por tópicos... quando puderem, favor responder
+
+1) É obrigatório a abertura de conta no Banco Original?
+
+2) Essa conta criada no Banco Original, precisará ser apresentada na contabilidade?
+
+3) E se o cliente não quiser de forma alguma abrir uma conta no Banco Original, como atendê-lo?  
+
+4) É obrigatório por lei a instituição financeira informar ao SEFAZ quais transações eletrônicas (cartão de crédito, pix, etc) foram creditadas na conta do contribuinte, baseado nisso, o Banco Original vai informar a SEFAZ sobre os créditos na conta do contribuinte ? Caso positivo, como ficará essa duplicidade de créditos perante os órgãos fiscalizadores, já que o Banco do Brasil fará isso também? 
+
+5) Em nosso exemplo real, foi cadastrada a conta do Banco do Brasil, poderiam nos explicar o porquê da informação dos tokens Client_ID e Client_Secret ? Qual a segurança e garantia nossos clientes terão, com a plataforma obtendo essa informação tão sensível. E se o cliente não tiver esses tokens, o que fazer?
+
+6) Cadastrei duas vezes a mesma conta do Banco do Brasil, como fazer para exclui-la? já que tentei modificar o status nos dois logins e não deu certo;
+
+7) Como fazer para cadastrar a nosso logo? tentei enviar o jpg, mas não está aceitando, conforme imagem acima;
+
+8) Por está apresentando a mensagem  {"code":400,"message":"The total is lower than the minimum payment accepted."} ao tentar criar uma transação, já que o PIX pela legislação pode R$ 0,01 centavos, e tem clientes que vendem chiclete, etc.
+```
+
+---
+
+**iii. O PO do Squad Transacional pediu para você fazer um teste da funcionalidade que vai subir no próximo dia**
+
+```
+opa <seu nome aqui>, blz?
+
+precisamos testar o card 3358 sem falta
+
+pq precisamos fazer o deploy até amanhã para cumprir os prazos combinados com o IAAS, blz? 
+```
+
+---
+
+**iv. O PO do Squad Transacional pediu para você fazer um teste da funcionalidade que vai subir no próximo dia**
+
