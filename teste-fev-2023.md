@@ -3,7 +3,7 @@
 - Sintam-se a vontade para formular as respostas. Podem responder por extenso, utilizar bullet points, prints, prints comentadas, etc.
 
 
-**1) O caso abaixo foi reportado pelo DESENVOLVEDOR de um sistema de PDV em um grupo de suporte à integração:**
+## 1) O caso abaixo foi reportado pelo DESENVOLVEDOR de um sistema de PDV em um grupo de suporte à integração:
 
 ```
 pessoal, dúvida:
@@ -14,7 +14,7 @@ Ou seja, a compra inicial foi de R$ 450, mas a substituição no momento da sepa
 é possível ou neste caso o cliente é obrigado a fazer um novo pedido?
 ```
 
-**Como você responderia?**
+### Como você responderia?
 
 
 
@@ -24,9 +24,9 @@ Ou seja, a compra inicial foi de R$ 450, mas a substituição no momento da sepa
 
 
 **2) As seguintes descrições das APIs da Shipay constam na nossa documentação oficial. Leia-as atentamente:**
-.
-.
-.
+
+
+
 **i. Serviço POST /pdvauth**
 
 *Autenticação de PDVs ('Pontos de Venda' ou 'Caixas')*
@@ -36,9 +36,9 @@ Serviço de autenticação JWT gerado através das três chaves de autenticaçã
 O access_token retornado por este serviço tem validade de 3 dias e deve ser utilizado para que o PDV autenticado possa realizar as demais chamadas nas APIs da Shipay.
 
 Este serviço de autenticação deve ser chamado em toda abertura do caixa no estabelecimento comercial.
-.
-.
-.
+
+
+
 **ii. Serviço POST /order**
 
 *Criar um pedido para pagamentos instantâneos.*
@@ -48,9 +48,9 @@ Esse serviço cria um pedido no PSP (Pix) ou Carteira Digital informado.
 Tem como principais características: aprovação instantânea após o pagamento ser realizado e expiração em 60 minutos. Após a expiração, não será possível pagar os pedidos.
 
 Recomendamos a utilização desse serviço para sistemas de PDV e e-commerce que exijam aprovação instantânea do pagamento quando ele é realizado pelo pagador e confirmado pela Carteira Digital ou PSP (Pix).
-.
-.
-.
+
+
+
 **iii. Serviço GET /order/<order_id>**
 
 *Retornar o status do pedido para pagamentos instantâneos.*
