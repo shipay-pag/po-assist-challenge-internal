@@ -20,10 +20,12 @@ Ou seja, a compra inicial foi de R$ 450, mas a substituição no momento da sepa
 
 ----
 ----
+----
+----
 
 
 
-**2) As seguintes descrições das APIs da Shipay constam na nossa documentação oficial. Leia-as atentamente:**
+## 2) As seguintes descrições das APIs da Shipay constam na nossa documentação oficial. Leia-as atentamente:
 
 
 
@@ -63,11 +65,11 @@ IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segun
 .
 ----
 
-Os logs abaixo representam as chamadas que um sistema de PDV está realizando nas APIs da Shipay para realizar uma transação na frente do caixa:
-
-
+### Os logs abaixo representam as chamadas que um sistema de PDV está realizando nas APIs da Shipay para realizar uma transação na frente do caixa:
 
 ```
+[        DATA E HORA       ] "                       API ACIONADA                     " DEMAIS INFORMAÇÕES (STATUS CODE, TAMANHO, IP, ETC)
+
 [03/Feb/2023:00:15:04 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
 [03/Feb/2023:00:15:04 +0000] "GET /v1/wallets                                 HTTP/1.0" 200 2589 "-" "python-requests/2.24.0" "107.178.207.1
 [03/Feb/2023:00:15:05 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
