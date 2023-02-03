@@ -60,9 +60,7 @@ Recomendamos a utilização desse serviço para sistemas de PDV e e-commerce que
 Este serviço retorna informações de um pedido específico. Deve ser utilizado para consultar o status do pedido após a sua criação e confirmar se o comprador efetuou o pagamento, ou seja, se o status mudou de "pending" para "approved".
 
 IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segundos entre uma e outra.
-.
-.
-.
+
 ----
 
 ### Os logs abaixo representam as chamadas que um sistema de PDV está realizando nas APIs da Shipay para realizar uma transação na frente do caixa:
