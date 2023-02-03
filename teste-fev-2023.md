@@ -50,8 +50,6 @@ Este endpoint retorna todas as carteiras digitais que estejam associadas à loja
 
 Este serviço deve ser chamado pelo PDV sempre antes de enviar um pedido (POST /order) para a Shipay. A ideia é que o PDV exiba na tela a lista de carteiras disponíveis e o operador de caixa selecione a carteira informada pelo comprador.
 
-Utilizando este serviço, elimina-se (ou reduz-se) a necessidade de implementação por parte da equipe do sistema de PDV integrado na Shipay quando um cliente (lojista) passar a aceitar uma nova carteira através da Shipay. O /v1/wallets torna isso transparente ao PDV.
-
 ---
 
 **iii. API POST /order**
