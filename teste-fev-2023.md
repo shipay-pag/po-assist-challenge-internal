@@ -120,7 +120,7 @@ pessoal, tentei gerar um pedido no POST /order e recebi a seguinte mensagem de e
 
 "message":"The total of the purchase does not match with the sum of the items price"
 
-podem me ajudar?
+depodem me ajudar?
 ```
 
 ---
@@ -155,12 +155,24 @@ organizei as dúvidas por tópicos... quando puderem, favor responder
 ```
 opa <seu nome aqui>, blz?
 
-precisamos testar o card 3358 sem falta
-
-pq precisamos fazer o deploy até amanhã para cumprir os prazos combinados com o IAAS, blz? 
+precisamos testar o card 3358 para fazer o deploy até amanhã para cumprir os prazos combinados com o parceiro, blz? 
 ```
 
 ---
 
-**iv. O PO do Squad Transacional pediu para você fazer um teste da funcionalidade que vai subir no próximo dia**
+**iv. Um desenvolvedor da squad de cadastro fez uma pergunta sobre um BUG que você reportou no Painel Shipay**
+```
+Bom dia <seu nome aqui>, td bem?
 
+Vi seu report no grupo, vc consegue mandar o curl da requisição para eu conseguir simular por aqui? Vlw
+
+```
+
+---
+
+**v. O DEV do Sistema de PDV RetailSystem reportou indisponibilidade no ambiente de staging (ambiente de homologação/integração)
+```
+pessoal, deste ontem a noite estamos recebendo erro 503 para criar pedidos com expiração variável (POST /orderv)
+
+isso está atrasando nossa integração, podem verificar, por favor?
+```
