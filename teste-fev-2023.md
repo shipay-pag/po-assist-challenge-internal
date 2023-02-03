@@ -40,9 +40,21 @@ O access_token retornado por este serviço tem validade de 3 dias e deve ser uti
 
 Este serviço de autenticação deve ser chamado em toda abertura do caixa no estabelecimento comercial.
 
+---
 
+**ii. API GET /v1/wallets**
 
-**ii. API POST /order**
+*Lista de carteiras digitais e PSP's associadas à loja*
+
+Este endpoint retorna todas as carteiras digitais que estejam associadas à loja vinculada ao PDV (caixa) autenticado na Shipay.
+
+Este serviço deve ser chamado pelo PDV sempre antes de enviar um pedido (POST /order) para a Shipay. A ideia é que o PDV exiba na tela a lista de carteiras disponíveis e o operador de caixa selecione a carteira informada pelo comprador.
+
+Utilizando este serviço, elimina-se (ou reduz-se) a necessidade de implementação por parte da equipe do sistema de PDV integrado na Shipay quando um cliente (lojista) passar a aceitar uma nova carteira através da Shipay. O /v1/wallets torna isso transparente ao PDV.
+
+---
+
+**iii. API POST /order**
 
 *Criar um pedido para pagamentos instantâneos.*
 
@@ -52,9 +64,9 @@ Tem como principais características: aprovação instantânea após o pagamento
 
 Recomendamos a utilização desse serviço para sistemas de PDV e e-commerce que exijam aprovação instantânea do pagamento quando ele é realizado pelo pagador e confirmado pela Carteira Digital ou PSP (Pix).
 
+---
 
-
-**iii. API GET /order/<order_id>**
+**iv. API GET /order/<order_id>**
 
 *Retornar o status do pedido para pagamentos instantâneos.*
 
@@ -86,3 +98,7 @@ IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segun
 [03/Feb/2023:00:15:11 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
 [03/Feb/2023:00:15:11 +0000] "GET /order/f04e1945-3088-4dd3-8818-817ab98a8357 HTTP/1.0" 200 579 "-" "python-requests/2.24.0" "107.178.207.1
 ```
+**Dicas:**
+- Cada linha de log representa uma chamada que o parceiro fez na nossa API
+- A ordem cronológica dos eventos é de baixo para cima
+- 
