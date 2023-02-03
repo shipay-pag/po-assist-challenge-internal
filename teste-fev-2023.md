@@ -102,4 +102,4 @@ IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segun
 
 ----
 
-### Considerando o exposto, você sugeriria alguma melhoria para o sistema de PDV que desenvolveu esta integração? 
+### Considerando o exposto, você sugeriria alguma melhoria para o sistema de PDV que desenvolveu esta integração? Qual melhoria?
