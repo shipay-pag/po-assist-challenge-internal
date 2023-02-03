@@ -29,7 +29,7 @@ Ou seja, a compra inicial foi de R$ 450, mas a substituição no momento da sepa
 
 
 
-**i. Serviço POST /pdvauth**
+**i. API POST /pdvauth**
 
 *Autenticação de PDVs ('Pontos de Venda' ou 'Caixas')*
 
@@ -41,7 +41,7 @@ Este serviço de autenticação deve ser chamado em toda abertura do caixa no es
 
 
 
-**ii. Serviço POST /order**
+**ii. API POST /order**
 
 *Criar um pedido para pagamentos instantâneos.*
 
@@ -53,7 +53,7 @@ Recomendamos a utilização desse serviço para sistemas de PDV e e-commerce que
 
 
 
-**iii. Serviço GET /order/<order_id>**
+**iii. API GET /order/<order_id>**
 
 *Retornar o status do pedido para pagamentos instantâneos.*
 
