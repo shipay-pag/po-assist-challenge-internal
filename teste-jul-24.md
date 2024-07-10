@@ -81,6 +81,8 @@ IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segun
 
 ### Considerando o exposto, você sugeriria alguma melhoria para o sistema de PDV que desenvolveu esta integração? Explique.
 
+---
+
 ## 5. Durante um dia normal de trabalho, você se depara com as seguintes demandas no mesmo instante:
 
 **i. Dúvida no grupo de Suporte à integração do PDV MaxSystem**
@@ -89,7 +91,7 @@ pessoal, tentei gerar um pedido no POST /order e recebi a seguinte mensagem de e
 
 "message":"The total of the purchase does not match with the sum of the items price"
 
-depodem me ajudar?
+podem me ajudar?
 ```
 
 ---
@@ -119,7 +121,7 @@ organizei as dúvidas por tópicos... quando puderem, favor responder
 
 ---
 
-**iii. O PO do Squad Transacional pediu para você fazer um teste da funcionalidade que vai subir no próximo dia**
+**iii. **
 
 ```
 opa <seu nome aqui>, blz?
@@ -148,4 +150,4 @@ isso está atrasando nossa integração, podem verificar, por favor?
 
 ---
 
-### Considerando a situação, qual a ordem de prioridade? 
+### Considerando a situação, em qual ordem você priorizaria as atividades? Por que? 
