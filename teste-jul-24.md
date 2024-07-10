@@ -1,5 +1,4 @@
-# Processo Seletivo para Analista de Suporte à Integração
-# Teste Técnico
+# Processo Seletivo para Analista de Suporte à Integração [Teste Técnico]
 
 ## 1. O sistema de PDV MaxSystem já está integrado às APIs da Shipay e já fornece o serviço de Pix para pagamento imediato para seus clientes. O responsável do sistema de PDV MaxSystem te pergunta sobre o que é preciso para que ele possa fornecer também Boleto Híbrido para seus clientes. Como você responderia?
 
@@ -125,9 +124,28 @@ organizei as dúvidas por tópicos... quando puderem, favor responder
 **iii. O executivo de parcerias da Shipay pediu para você criar o ambiente de desenvolvimento e enviar documentação para um novo sistema de PDV que vai começar a desenvolver a integração com a Shipay.**
 
 ```
-opa meu amigo, tudo bem?
+Bom dia,
 
-pode criar o ambiente de desenvolvimento para o SuperPDV?
+
+Time de integração Shipay por favor fornecer ambiente de staging, documentação técnica completa e grupo de whatsapp para desenvolvimento da integração. Dados abaixo e em anexo:
+
+- Informações da empresa: 
+Razão Social: Ideal Sistemas informática Eireli ME  
+Nome Fantasia: Ideal Brasil
+CNPJ: 25.310.581/0001-99
+Email para contato: ideal@ideal.net
+
+- Informações da Parceria: 
+Internacional: Não
+Plataforma para suporte: Verificar com parceiro
+Cashin e Cashout: Só cashin
+Alguma Observação:
+
+- Informações dos usuários que vão acessar o painel de Staging: 
+Nome completo: Marisa Silva Sauro
+Telefone:11 97353-5943 Email:marisa@ideal.net
+CPF:  954.227.568-82
+Adicionar no grupo de comunicação; Sim
 ```
 
 ---
