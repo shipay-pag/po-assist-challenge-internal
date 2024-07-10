@@ -1,6 +1,6 @@
 # Processo Seletivo para Analista de Suporte à Integração - Teste Técnico
 
-## 1. O sistema de PDV X já está integrado às APIs da Shipay e já fornece o serviço de Pix para pagamento imediato para seus clientes. O responsável do sistema de PDV X te pergunta sobre o que é preciso para que ele possa fornecer também Boleto Híbrido para seus clientes. Como você responderia?
+## 1. O sistema de PDV MaxSystem já está integrado às APIs da Shipay e já fornece o serviço de Pix para pagamento imediato para seus clientes. O responsável do sistema de PDV MaxSystem te pergunta sobre o que é preciso para que ele possa fornecer também Boleto Híbrido para seus clientes. Como você responderia?
 
 ## 2. Descreva em poucas palavras quais produtos a Shipay oferece para os parceiros.
 
