@@ -121,27 +121,27 @@ organizei as dúvidas por tópicos... quando puderem, favor responder
 
 ---
 
-**iii. **
+**iii. O executivo de parcerias da Shipay pediu para você criar o ambiente de desenvolvimento e enviar documentação para um novo sistema de PDV que vai começar a desenvolver a integração com a Shipay.**
 
 ```
-opa <seu nome aqui>, blz?
+opa meu amigo, tudo bem?
 
-precisamos testar o card 3358 para fazer o deploy até amanhã para cumprir os prazos combinados com o parceiro, blz? 
-```
-
----
-
-**iv. Um desenvolvedor da squad de cadastro fez uma pergunta sobre um BUG que você reportou no Painel Shipay**
-```
-Bom dia <seu nome aqui>, td bem?
-
-Vi seu report no grupo, vc consegue mandar o curl da requisição para eu conseguir simular por aqui? Vlw
-
+pode criar o ambiente de desenvolvimento para o SuperPDV?
 ```
 
 ---
 
-**v. O DEV do Sistema de PDV RetailSystem reportou indisponibilidade no ambiente de staging (ambiente de homologação/integração)**
+**iv. O desenvolvedor do Sistema de PDV InterSystem reportou que está com um erro ao cadastrar um novo cliente no painel de Staging (ambiente de homologação/integração)**
+```
+oi, estou recebendo "Erro na API" ao clicar para cadastrar um novo cliente
+
+pode me ajudar, por favor?
+
+```
+
+---
+
+**v. O DEV do Sistema de PDV RetailSystem reportou indisponibilidade nas APIs transacionais do ambiente de Staging (ambiente de homologação/integração)**
 ```
 pessoal, deste ontem a noite estamos recebendo erro 503 para criar pedidos com expiração variável (POST /orderv)
 
