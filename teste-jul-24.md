@@ -21,7 +21,6 @@ O access_token retornado por este serviço tem validade de 3 dias e deve ser uti
 
 Este serviço de autenticação deve ser chamado em toda abertura do caixa no estabelecimento comercial.
 
----
 
 **ii. API GET /v1/wallets**
 
@@ -31,7 +30,6 @@ Este endpoint retorna todas as carteiras digitais que estejam associadas à loja
 
 Este serviço deve ser chamado pelo PDV sempre antes de enviar um pedido (POST /order) para a Shipay. A ideia é que o PDV exiba na tela a lista de carteiras disponíveis e o operador de caixa selecione a carteira informada pelo comprador.
 
----
 
 **iii. API POST /order**
 
@@ -43,7 +41,6 @@ Tem como principais características: aprovação instantânea após o pagamento
 
 Recomendamos a utilização desse serviço para sistemas de PDV e e-commerce que exijam aprovação instantânea do pagamento quando ele é realizado pelo pagador e confirmado pela Carteira Digital ou PSP (Pix).
 
----
 
 **iv. API GET /order/<order_id>**
 
@@ -53,7 +50,6 @@ Este serviço retorna informações de um pedido específico. Deve ser utilizado
 
 IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segundos entre uma e outra.
 
-----
 
 ### Os logs abaixo representam as chamadas que um sistema de PDV está realizando nas APIs da Shipay para realizar uma transação na frente do caixa:
 
@@ -81,6 +77,5 @@ IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segun
 - Cada linha de log registra uma chamada que o parceiro fez em alguma API
 - A ordem cronológica dos eventos é de cima para baixo
 
-----
 
 ### Considerando o exposto, você sugeriria alguma melhoria para o sistema de PDV que desenvolveu esta integração? Explique.
