@@ -7,4 +7,80 @@
 ## 3. O diagrama de sequência abaixo ilustra o fluxo transacional entre PDV, Shipay e PSP. Descreva com suas palavras o que falta nessa imagem para que o comprador saia da loja com sua compra paga via Pix (se preferir, conclua o desenho).
 ![image](https://github.com/shipay-pag/po-assist-challenge-internal/assets/59707512/8519c0aa-b092-462b-ac25-58865315d21c)
 
-## 4.   ........
+## 4. As seguintes descrições das APIs da Shipay constam na nossa documentação oficial. Leia-as atentamente:
+
+
+
+**i. API POST /pdvauth**
+
+*Autenticação de PDVs ('Pontos de Venda' ou 'Caixas')*
+
+Serviço de autenticação JWT gerado através das três chaves de autenticação de PDVs (access key, secret key e client id) criadas com o cadastro do cliente (lojista) e suas respectivas lojas e caixas na Shipay.
+
+O access_token retornado por este serviço tem validade de 3 dias e deve ser utilizado para que o PDV autenticado possa realizar as demais chamadas nas APIs da Shipay.
+
+Este serviço de autenticação deve ser chamado em toda abertura do caixa no estabelecimento comercial.
+
+---
+
+**ii. API GET /v1/wallets**
+
+*Lista de carteiras digitais e PSP's associadas à loja*
+
+Este endpoint retorna todas as carteiras digitais que estejam associadas à loja vinculada ao PDV (caixa) autenticado na Shipay.
+
+Este serviço deve ser chamado pelo PDV sempre antes de enviar um pedido (POST /order) para a Shipay. A ideia é que o PDV exiba na tela a lista de carteiras disponíveis e o operador de caixa selecione a carteira informada pelo comprador.
+
+---
+
+**iii. API POST /order**
+
+*Criar um pedido para pagamentos instantâneos.*
+
+Esse serviço cria um pedido no PSP (Pix) ou Carteira Digital informado.
+
+Tem como principais características: aprovação instantânea após o pagamento ser realizado e expiração em 60 minutos. Após a expiração, não será possível pagar os pedidos.
+
+Recomendamos a utilização desse serviço para sistemas de PDV e e-commerce que exijam aprovação instantânea do pagamento quando ele é realizado pelo pagador e confirmado pela Carteira Digital ou PSP (Pix).
+
+---
+
+**iv. API GET /order/<order_id>**
+
+*Retornar o status do pedido para pagamentos instantâneos.*
+
+Este serviço retorna informações de um pedido específico. Deve ser utilizado para consultar o status do pedido após a sua criação e confirmar se o comprador efetuou o pagamento, ou seja, se o status mudou de "pending" para "approved".
+
+IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segundos entre uma e outra.
+
+----
+
+### Os logs abaixo representam as chamadas que um sistema de PDV está realizando nas APIs da Shipay para realizar uma transação na frente do caixa:
+
+```
+[ (dd/mmm/aaaa):(hh:mm:ss) ] "-----------------------API ACIONADA---------------------" DEMAIS INFORMAÇÕES (STATUS CODE, TAMANHO, IP, ETC)
+
+[03/Feb/2023:00:15:04 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:04 +0000] "GET /v1/wallets                                 HTTP/1.0" 200 2589 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:05 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:05 +0000] "POST /order                                     HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:06 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:06 +0000] "GET /order/f04e1945-3088-4dd3-8818-817ab98a8357 HTTP/1.0" 200 579 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:07 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:07 +0000] "GET /order/f04e1945-3088-4dd3-8818-817ab98a8357 HTTP/1.0" 200 579 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:08 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:08 +0000] "GET /order/f04e1945-3088-4dd3-8818-817ab98a8357 HTTP/1.0" 200 579 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:09 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:09 +0000] "GET /order/f04e1945-3088-4dd3-8818-817ab98a8357 HTTP/1.0" 200 579 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:10 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:10 +0000] "GET /order/f04e1945-3088-4dd3-8818-817ab98a8357 HTTP/1.0" 200 579 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:11 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
+[03/Feb/2023:00:15:11 +0000] "GET /order/f04e1945-3088-4dd3-8818-817ab98a8357 HTTP/1.0" 200 579 "-" "python-requests/2.24.0" "107.178.207.1
+```
+**Dicas:**
+- Cada linha de log registra uma chamada que o parceiro fez em alguma API
+- A ordem cronológica dos eventos é de cima para baixo
+
+----
+
+### Considerando o exposto, você sugeriria alguma melhoria para o sistema de PDV que desenvolveu esta integração? Explique.
