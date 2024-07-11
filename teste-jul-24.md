@@ -1,4 +1,7 @@
 # Processo Seletivo para Analista de Suporte à Integração [Teste Técnico]
+- 11/07/2024 - 14:00h
+- Duração de 50 minutos
+
 
 ## 1. O sistema de PDV MaxSystem já está integrado às APIs da Shipay e já fornece o serviço de Pix para pagamento imediato para seus clientes. O responsável do sistema de PDV MaxSystem te pergunta sobre o que é preciso para que ele possa fornecer também Boleto Híbrido para seus clientes. Como você responderia?
 
@@ -152,7 +155,7 @@ Adicionar no grupo de comunicação; Sim
 
 **iv. O desenvolvedor do Sistema de PDV InterSystem reportou que está com um erro ao cadastrar um novo cliente no painel de Staging (ambiente de homologação/integração)**
 ```
-oi, estou recebendo "Erro na API" ao clicar para cadastrar um novo cliente
+oi, estou recebendo "Erro na API" ao clicar para cadastrar um novo cliente no Painel
 
 pode me ajudar, por favor?
 
