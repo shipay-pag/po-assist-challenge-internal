@@ -2,10 +2,11 @@
 - 11/07/2024 - 14:00h
 - Duração de 50 minutos
 
+---
 
 ## 1. O sistema de PDV MaxSystem já está integrado às APIs da Shipay e já fornece o serviço de Pix para pagamento imediato para seus clientes. O responsável do sistema de PDV MaxSystem te pergunta sobre o que é preciso para que ele possa fornecer também Boleto Híbrido para seus clientes. Como você responderia?
 
-## 2. Liste os produtos que a Shipay disponibiliza para os parceiros e dê uma breve descrição para cada um.
+## 2. Descreva brevemente todos os produtos que a Shipay disponibiliza para os parceiros, citando casos de uso para cada um dos produtos.  
 
 ## 3. O diagrama de sequência abaixo ilustra o fluxo transacional entre PDV, Shipay e PSP. Descreva com suas palavras o que falta nessa imagem para que o comprador saia da loja com sua compra paga via Pix (se preferir, conclua o desenho).
 ![image](https://github.com/shipay-pag/po-assist-challenge-internal/assets/59707512/8519c0aa-b092-462b-ac25-58865315d21c)
@@ -55,10 +56,10 @@ Este serviço retorna informações de um pedido específico. Deve ser utilizado
 IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segundos entre uma e outra.
 
 
-### Os logs abaixo representam as chamadas que um sistema de PDV está realizando nas APIs da Shipay para realizar uma transação na frente do caixa:
+### Os logs abaixo representam os acionamentos de um sistema de PDV nas APIs da Shipay para realizar uma transação na frente do caixa:
 
 ```
-[ (dd/mmm/aaaa):(hh:mm:ss) ] "-----------------------API ACIONADA---------------------" DEMAIS INFORMAÇÕES (STATUS CODE, TAMANHO, IP, ETC)
+|-------DATA E HORA--------| |-----------------API ACIONADA-----------------|
 
 [03/Feb/2023:00:15:04 +0000] "POST /pdvauth                                   HTTP/1.0" 200 1182 "-" "python-requests/2.24.0" "107.178.207.1
 [03/Feb/2023:00:15:04 +0000] "GET /v1/wallets                                 HTTP/1.0" 200 2589 "-" "python-requests/2.24.0" "107.178.207.1
@@ -78,7 +79,7 @@ IMPORTANTE: As consultas devem ser feitas com intervalos de, no mínimo, 2 segun
 [03/Feb/2023:00:15:11 +0000] "GET /order/f04e1945-3088-4dd3-8818-817ab98a8357 HTTP/1.0" 200 579 "-" "python-requests/2.24.0" "107.178.207.1
 ```
 **Dicas:**
-- Cada linha de log registra uma chamada que o parceiro fez em alguma API
+- Cada linha de log registra um acionamento do PDV em alguma API da Shipay
 - A ordem cronológica dos eventos é de cima para baixo
 
 
